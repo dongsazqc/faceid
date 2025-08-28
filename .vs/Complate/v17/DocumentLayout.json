@@ -1,0 +1,556 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Study\\VsStudio\\Complate\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250828040602_addtablecheckin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Complate\\Migrations\\20250828040602_addtablecheckin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\formcheckin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\formcheckin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|D:\\Study\\VsStudio\\Complate\\complate\\formcheckin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\formcheckin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\models\\checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\models\\checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|D:\\Study\\VsStudio\\Complate\\complate\\formip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\formip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|D:\\Study\\VsStudio\\Complate\\complate\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\http\\httpclienthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\http\\httpclienthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|D:\\Study\\VsStudio\\Complate\\complate\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250828015246_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Complate\\Migrations\\20250828015246_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\formuser.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\formuser.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\formip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\formip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\formcheckin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\formcheckin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\data\\appdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\data\\appdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\formmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\formmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\getimage\\cloudinaryhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\getimage\\cloudinaryhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250827043158_notnull1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Complate\\Migrations\\20250827043158_notnull1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250827042618_notnull.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Complate\\Migrations\\20250827042618_notnull.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250827025258_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Complate\\Migrations\\20250827025258_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250827025200_swap_keylibId.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Complate\\Migrations\\20250827025200_swap_keylibId.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250827024114_tablecheckin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Complate\\Migrations\\20250827024114_tablecheckin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\complate.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\complate.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250823050333_addrowimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Complate\\Migrations\\20250823050333_addrowimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250823044647_resttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Complate\\Migrations\\20250823044647_resttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250823043630_resttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Complate\\Migrations\\20250823043630_resttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250823042711_null.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Complate\\Migrations\\20250823042711_null.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250823034503_fix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Complate\\Migrations\\20250823034503_fix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\migrations\\20250828032311_checkinhitstory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\migrations\\20250828032311_checkinhitstory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|d:\\study\\vsstudio\\complate\\complate\\migrations\\20250828022629_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6EC607-1C65-45EC-B260-5FA2D71E35F9}|Complate\\Complate.csproj|solutionrelative:complate\\migrations\\20250828022629_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250828040602_addtablecheckin.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250828040602_addtablecheckin.cs",
+              "RelativeDocumentMoniker": "Complate\\Migrations\\20250828040602_addtablecheckin.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250828040602_addtablecheckin.cs",
+              "RelativeToolTip": "Complate\\Migrations\\20250828040602_addtablecheckin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T04:06:02.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormCheckin.cs [Design]",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\FormCheckin.cs",
+              "RelativeDocumentMoniker": "Complate\\FormCheckin.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\FormCheckin.cs [Design]",
+              "RelativeToolTip": "Complate\\FormCheckin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T09:11:42.427Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormUser.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\FormUser.cs",
+              "RelativeDocumentMoniker": "Complate\\FormUser.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\FormUser.cs",
+              "RelativeToolTip": "Complate\\FormUser.cs",
+              "ViewState": "AgIAAAQBAAAAAAAAAAAAAP4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T04:05:13.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HttpClientHelper.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Http\\HttpClientHelper.cs",
+              "RelativeDocumentMoniker": "Complate\\Http\\HttpClientHelper.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Http\\HttpClientHelper.cs",
+              "RelativeToolTip": "Complate\\Http\\HttpClientHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T09:26:13.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Person.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Models\\Person.cs",
+              "RelativeDocumentMoniker": "Complate\\Models\\Person.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Models\\Person.cs",
+              "RelativeToolTip": "Complate\\Models\\Person.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAADwvxMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T04:26:14.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormCheckin.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\FormCheckin.cs",
+              "RelativeDocumentMoniker": "Complate\\FormCheckin.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\FormCheckin.cs",
+              "RelativeToolTip": "Complate\\FormCheckin.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T08:52:23.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "20250828032311_checkinhitstory.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250828032311_checkinhitstory.cs",
+              "RelativeDocumentMoniker": "Complate\\Migrations\\20250828032311_checkinhitstory.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250828032311_checkinhitstory.cs",
+              "RelativeToolTip": "Complate\\Migrations\\20250828032311_checkinhitstory.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T03:23:11.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormIp.cs [Design]",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\FormIp.cs",
+              "RelativeDocumentMoniker": "Complate\\FormIp.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\FormIp.cs [Design]",
+              "RelativeToolTip": "Complate\\FormIp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T08:13:19.261Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Checkin.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Models\\Checkin.cs",
+              "RelativeDocumentMoniker": "Complate\\Models\\Checkin.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Models\\Checkin.cs",
+              "RelativeToolTip": "Complate\\Models\\Checkin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T03:21:43.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Complate\\Data\\AppDbContext.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Complate\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T03:59:34.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormMain.cs [Design]",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\FormMain.cs",
+              "RelativeDocumentMoniker": "Complate\\FormMain.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\FormMain.cs [Design]",
+              "RelativeToolTip": "Complate\\FormMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T01:57:14.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormUser.cs [Design]",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\FormUser.cs",
+              "RelativeDocumentMoniker": "Complate\\FormUser.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\FormUser.cs [Design]",
+              "RelativeToolTip": "Complate\\FormUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T10:13:49.812Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "20250828022629_new.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250828022629_new.cs",
+              "RelativeDocumentMoniker": "Complate\\Migrations\\20250828022629_new.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250828022629_new.cs",
+              "RelativeToolTip": "Complate\\Migrations\\20250828022629_new.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T02:26:29.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20250828015246_new.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250828015246_new.cs",
+              "RelativeDocumentMoniker": "Complate\\Migrations\\20250828015246_new.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250828015246_new.cs",
+              "RelativeToolTip": "Complate\\Migrations\\20250828015246_new.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T01:52:46.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormUser.Designer.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\FormUser.Designer.cs",
+              "RelativeDocumentMoniker": "Complate\\FormUser.Designer.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\FormUser.Designer.cs",
+              "RelativeToolTip": "Complate\\FormUser.Designer.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAIwBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T10:13:25.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormMain.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\FormMain.cs",
+              "RelativeDocumentMoniker": "Complate\\FormMain.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\FormMain.cs",
+              "RelativeToolTip": "Complate\\FormMain.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAA9wC4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T05:30:38.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormCheckin.Designer.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\FormCheckin.Designer.cs",
+              "RelativeDocumentMoniker": "Complate\\FormCheckin.Designer.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\FormCheckin.Designer.cs",
+              "RelativeToolTip": "Complate\\FormCheckin.Designer.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAiwBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T04:59:10.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FormIp.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\FormIp.cs",
+              "RelativeDocumentMoniker": "Complate\\FormIp.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\FormIp.cs",
+              "RelativeToolTip": "Complate\\FormIp.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAwwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T08:17:09.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Program.cs",
+              "RelativeDocumentMoniker": "Complate\\Program.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Program.cs",
+              "RelativeToolTip": "Complate\\Program.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T03:48:01.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AppDbContextFactory.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Data\\AppDbContextFactory.cs",
+              "RelativeDocumentMoniker": "Complate\\Data\\AppDbContextFactory.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Data\\AppDbContextFactory.cs",
+              "RelativeToolTip": "Complate\\Data\\AppDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T03:59:37.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAAQVAAAAAAAAAAD4vxYVAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-08-27T08:48:37.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FormMain.Designer.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\FormMain.Designer.cs",
+              "RelativeDocumentMoniker": "Complate\\FormMain.Designer.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\FormMain.Designer.cs",
+              "RelativeToolTip": "Complate\\FormMain.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T05:48:54.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CloudinaryHelper.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\GetImage\\CloudinaryHelper.cs",
+              "RelativeDocumentMoniker": "Complate\\GetImage\\CloudinaryHelper.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\GetImage\\CloudinaryHelper.cs",
+              "RelativeToolTip": "Complate\\GetImage\\CloudinaryHelper.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAIwFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T03:43:49.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20250827043158_notnull1.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250827043158_notnull1.cs",
+              "RelativeDocumentMoniker": "Complate\\Migrations\\20250827043158_notnull1.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250827043158_notnull1.cs",
+              "RelativeToolTip": "Complate\\Migrations\\20250827043158_notnull1.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T04:31:58.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "20250827042618_notnull.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250827042618_notnull.cs",
+              "RelativeDocumentMoniker": "Complate\\Migrations\\20250827042618_notnull.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250827042618_notnull.cs",
+              "RelativeToolTip": "Complate\\Migrations\\20250827042618_notnull.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T04:26:18.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "20250827025200_swap_keylibId.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250827025200_swap_keylibId.cs",
+              "RelativeDocumentMoniker": "Complate\\Migrations\\20250827025200_swap_keylibId.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250827025200_swap_keylibId.cs",
+              "RelativeToolTip": "Complate\\Migrations\\20250827025200_swap_keylibId.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T02:52:00.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "20250827025258_new.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250827025258_new.cs",
+              "RelativeDocumentMoniker": "Complate\\Migrations\\20250827025258_new.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250827025258_new.cs",
+              "RelativeToolTip": "Complate\\Migrations\\20250827025258_new.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T02:52:58.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "20250827024114_tablecheckin.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250827024114_tablecheckin.cs",
+              "RelativeDocumentMoniker": "Complate\\Migrations\\20250827024114_tablecheckin.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250827024114_tablecheckin.cs",
+              "RelativeToolTip": "Complate\\Migrations\\20250827024114_tablecheckin.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T02:41:15.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Complate.csproj",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Complate.csproj",
+              "RelativeDocumentMoniker": "Complate\\Complate.csproj",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Complate.csproj",
+              "RelativeToolTip": "Complate\\Complate.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-23T05:06:45.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "20250823050333_addrowimage.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250823050333_addrowimage.cs",
+              "RelativeDocumentMoniker": "Complate\\Migrations\\20250823050333_addrowimage.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250823050333_addrowimage.cs",
+              "RelativeToolTip": "Complate\\Migrations\\20250823050333_addrowimage.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T05:03:33.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "20250823044647_resttable.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250823044647_resttable.cs",
+              "RelativeDocumentMoniker": "Complate\\Migrations\\20250823044647_resttable.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250823044647_resttable.cs",
+              "RelativeToolTip": "Complate\\Migrations\\20250823044647_resttable.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T04:46:47.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "20250823043630_resttable.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250823043630_resttable.cs",
+              "RelativeDocumentMoniker": "Complate\\Migrations\\20250823043630_resttable.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250823043630_resttable.cs",
+              "RelativeToolTip": "Complate\\Migrations\\20250823043630_resttable.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T04:36:30.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "20250823042711_null.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250823042711_null.cs",
+              "RelativeDocumentMoniker": "Complate\\Migrations\\20250823042711_null.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250823042711_null.cs",
+              "RelativeToolTip": "Complate\\Migrations\\20250823042711_null.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T04:27:11.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "20250823034503_fix.cs",
+              "DocumentMoniker": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250823034503_fix.cs",
+              "RelativeDocumentMoniker": "Complate\\Migrations\\20250823034503_fix.cs",
+              "ToolTip": "D:\\Study\\VsStudio\\Complate\\Complate\\Migrations\\20250823034503_fix.cs",
+              "RelativeToolTip": "Complate\\Migrations\\20250823034503_fix.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T03:45:03.801Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

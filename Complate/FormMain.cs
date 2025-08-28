@@ -62,6 +62,11 @@ namespace Complate
         {
             openChildForm(new FormCheckin(_context));
         }
+
+        private void btn_log_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormLog(_context));
+        }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -78,5 +83,6 @@ namespace Complate
         {
 
         }
+
     }
 }

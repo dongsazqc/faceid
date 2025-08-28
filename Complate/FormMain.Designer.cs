@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             pn_left = new Panel();
+            btn_log = new Button();
             btn_checkin = new Button();
             btn_user = new Button();
             pictureBox1 = new PictureBox();
@@ -44,6 +45,7 @@
             // pn_left
             // 
             pn_left.BackColor = Color.Brown;
+            pn_left.Controls.Add(btn_log);
             pn_left.Controls.Add(btn_checkin);
             pn_left.Controls.Add(btn_user);
             pn_left.Controls.Add(pictureBox1);
@@ -52,6 +54,19 @@
             pn_left.Size = new Size(219, 825);
             pn_left.TabIndex = 0;
             pn_left.Paint += panel1_Paint;
+            // 
+            // btn_log
+            // 
+            btn_log.BackColor = Color.FromArgb(192, 192, 0);
+            btn_log.FlatStyle = FlatStyle.Flat;
+            btn_log.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_log.Location = new Point(0, 288);
+            btn_log.Name = "btn_log";
+            btn_log.Size = new Size(219, 42);
+            btn_log.TabIndex = 4;
+            btn_log.Text = "Log";
+            btn_log.UseVisualStyleBackColor = false;
+            btn_log.Click += btn_log_Click;
             // 
             // btn_checkin
             // 
@@ -103,7 +118,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.WhiteSmoke;
             label1.Font = new Font("Tahoma", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(518, 29);
+            label1.Location = new Point(538, 32);
             label1.Name = "label1";
             label1.Size = new Size(77, 33);
             label1.TabIndex = 0;
@@ -145,5 +160,6 @@
         private Panel pn_mid;
         private Button btn_checkin;
         private Label label1;
+        private Button btn_log;
     }
 }

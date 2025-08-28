@@ -1,15 +1,19 @@
-﻿using CloudinaryDotNet;
+﻿using ClosedXML.Excel;
+using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using Complate.Data;
 using Complate.Models;
+using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 using System.ComponentModel;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Xml.Linq;
+
 
 namespace Complate
 {
@@ -28,14 +32,17 @@ namespace Complate
             cbx_Gender.Items.Add(new ComboBoxItem { Text = "Nam", Value = 2 });
             cbx_Gender.DisplayMember = "Text";
             cbx_Gender.ValueMember = "Value";
-            cbx_Gender.SelectedIndex = 1; // Mặc định Nam
+            cbx_Gender.SelectedIndex = 1;
+
+
         }
         public class ComboBoxItem
         {
             public string Text { get; set; }
             public int Value { get; set; }
-            public override string ToString() => Text; // hiển thị ra UI
+            public override string ToString() => Text;
         }
+
 
 
         private async void Form1_Load(object sender, EventArgs e)
@@ -47,193 +54,97 @@ namespace Complate
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            AddPersonAsync();
         }
-        private async Task AddPersonAsync()
+        private void btn_Edit_Click(object sender, EventArgs e)
         {
+            EditPersonAsync();
+        }
+        private async Task EditPersonAsync()
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Chưa chọn người để chỉnh sửa!");
+                return;
+            }
+
+            // Lấy thông tin người đang chọn
+            string customizeID = dataGridView1.CurrentRow.Cells["CustomizeID"].Value?.ToString();
+            if (string.IsNullOrEmpty(customizeID))
+            {
+                MessageBox.Show("Không tìm thấy CustomizeID!");
+                return;
+            }
+
+            var person = _context.Persons.FirstOrDefault(p => p.CustomizeID == customizeID);
+            if (person == null)
+            {
+                MessageBox.Show("Không tìm thấy người trong DB!");
+                return;
+            }
+
+            // Lấy dữ liệu mới từ các textbox / combobox
+            string newName = txt_Name.Text.Trim();
+            int newGender = (cbx_Gender.SelectedItem as ComboBoxItem)?.Value ?? 2;
+            string newTel = txt_Telnum.Text.Trim();
+            DateTime newBirthday = dtp_Birthday.Value;
+            string newImageUrl = txt_Imurl.Text.Trim();
+            string newBase64Data = txt_imgdata.Text.Trim();
+            string newaddress = txt_Address.Text.Trim();
             try
             {
-                string imageUrl = txt_Imurl.Text.Trim();
-                string base64Data = txt_imgdata.Text.Trim(); // Lấy Base64 trực tiếp từ txtImgData
-
-                if (string.IsNullOrEmpty(imageUrl) || string.IsNullOrEmpty(base64Data))
-                {
-                    MessageBox.Show("Chưa có ảnh để AddPerson!");
-                    return;
-                }
-
-                int gender = 1; // 1: nữ, 2: nam
-                string customizeID = GenerateUniqueCustomizeID();
-                string personUUID = GenerateUniquePersonUUID();
-                string idCard = GenerateUniqueCustomizeID();
-                // Tạo payload gửi API
+                // Payload gửi API
                 var payload = new
                 {
-                    @operator = "EditPersonsNew",
-                    DeviceID = 2565490,
-                    IdType = 0,
-                    Total = 1,
-                    info = new[]
-                    {
-                new
-                {
-                    @operator = "AddPerson",
+                    @operator = "EditPerson",
                     info = new
                     {
                         DeviceID = 2565490,
+                        IdType = 0,
                         CustomizeID = customizeID,
-                        PersonUUID = personUUID,
                         PersonType = 0,
-                        Name = txt_Name.Text.Trim(),
-                        Gender = gender,
-                        Nation = 0,
-                        CardType = 0,
-                        IdCard = idCard,
-                        Birthday = dtp_Birthday.Value.ToString("yyyy-MM-dd"),
-                        Telnum = txt_Telnum.Text.Trim(),
-                        Native = txt_Native.Text.Trim(),
-                        Address = txt_Address.Text.Trim(),
-                        Notes = txt_Notes.Text.Trim(),
-                        picURI = imageUrl,
+                        Name = newName,
+                        Gender = newGender,
+                        Birthday = newBirthday.ToString("yyyy-MM-dd"),
+                        Telnum = newTel,
+                        picURI = newImageUrl,
+                        Address = newaddress
                     }
-                }
-            }
                 };
 
                 var client = HttpClientHelper.Client;
                 var content = new StringContent(JsonConvert.SerializeObject(payload), Encoding.UTF8, "application/json");
-                var response = await client.PostAsync("/action/EditPersonsNew", content);
-                var result = await response.Content.ReadAsStringAsync();
+                var response = await client.PostAsync("/action/EditPerson", content);
+                string result = await response.Content.ReadAsStringAsync();
                 dynamic json = JsonConvert.DeserializeObject(result);
 
-                if (json != null && json.code == 200 && json.info.EditsSucNum == 1)
+                if (json != null && json.code == 200 && json.info.Result == "Ok")
                 {
-                    var newPerson = new Person
-                    {
-                        DeviceID = 2565490,
-                        Name = txt_Name.Text.Trim(),
-                        Gender = gender,
-                        IdCard = idCard,
-                        Birthday = dtp_Birthday.Value,
-                        Telnum = txt_Telnum.Text.Trim(),
-                        Native = txt_Native.Text.Trim(),
-                        Address = txt_Address.Text.Trim(),
-                        Notes = txt_Notes.Text.Trim(),
-                        PhotoUrl = imageUrl,
-                        PhotoData = base64Data, // Lấy trực tiếp từ txtImgData
-                        CustomizeID = customizeID,
-                        PersonUUID = personUUID
-                    };
+                    // Update DB local
+                    person.Name = newName;
+                    person.Gender = newGender;
+                    person.Telnum = newTel;
+                    person.Birthday = newBirthday;
+                    person.PhotoUrl = newImageUrl;
+                    if (!string.IsNullOrEmpty(newBase64Data))
+                        person.PhotoData = newBase64Data;
 
-                    _context.Persons.Add(newPerson);
                     await _context.SaveChangesAsync();
 
-                    MessageBox.Show("AddPerson thành công và lưu vào MySQL!");
+                    MessageBox.Show("Cập nhật người dùng thành công!");
                 }
                 else
                 {
-                    MessageBox.Show("AddPerson thất bại: " + result);
+                    MessageBox.Show("Chỉnh sửa thất bại: " + result);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi khi AddPerson: " + ex.Message);
+                MessageBox.Show("Lỗi khi chỉnh sửa: " + ex.Message);
             }
 
+          
             await LoadPersonListAsync();
         }
-
-        // ------------------- Helper sinh ID không trùng -------------------
-        private string GenerateUniqueCustomizeID()
-        {
-            Random rand = new Random();
-            string id;
-            do
-            {
-                id = rand.Next(100000, 999999).ToString(); // 6 chữ số
-            } while (_context.Persons.Any(p => p.CustomizeID == id));
-            return id;
-        }
-
-        private string GenerateUniquePersonUUID()
-        {
-            Random rand = new Random();
-            string id;
-            do
-            {
-                id = rand.Next(10000000, 99999999).ToString(); // 8 chữ số
-            } while (_context.Persons.Any(p => p.PersonUUID == id));
-            return id;
-        }
-
-        private string randumidcard()
-        {
-            Random rand = new Random();
-            string id;
-            do
-            {
-                id = rand.Next(100000000, 999999999).ToString(); // 9 chữ số
-                
-            }while(_context.Persons.Any(p => p.IdCard == id));
-            return id;
-        }
-        private byte[] capturedImageBytes = null; // lưu tạm để AddPerson dùng
-
-        private async Task CaptureAndUploadAsync()
-        {
-            try
-            {
-                var client = HttpClientHelper.Client;
-                var payload = new
-                {
-                    @operator = "FrontalFaceSnap",
-                    info = new { DeviceID = 2565490, Overall = 1 }
-                };
-
-                var content = new StringContent(JsonConvert.SerializeObject(payload), Encoding.UTF8, "application/json");
-                var response = await client.PostAsync("/action/FrontalFaceSnap", content);
-                var result = await response.Content.ReadAsStringAsync();
-                dynamic json = JsonConvert.DeserializeObject(result);
-
-                if (json == null || json.code != 200 || json.info.Result != "Ok")
-                {
-                    MessageBox.Show("Không lấy được ảnh: " + result);
-                    return;
-                }
-
-                // Convert base64 từ API sang byte[]
-                string base64Img = json.FacePic.ToString();
-                if (base64Img.StartsWith("data:image"))
-                {
-                    int commaIndex = base64Img.IndexOf(",");
-                    base64Img = base64Img.Substring(commaIndex + 1);
-                }
-                capturedImageBytes = Convert.FromBase64String(base64Img);
-
-                // Hiển thị lên PictureBox
-                using (var ms = new MemoryStream(capturedImageBytes))
-                {
-                    pictureBox1.Image?.Dispose();
-                    pictureBox1.Image = Image.FromStream(ms);
-                }
-                pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-
-                // Upload lên Cloud
-                string fileName = $"face_{DateTime.Now.Ticks}.jpg";
-                string url = await Task.Run(() => CloudinaryHelper.UploadImage(capturedImageBytes, fileName));
-                txt_Imurl.Text = url;
-
-                // Đồng thời lưu base64 vào txtImgData
-                txt_imgdata.Text = Convert.ToBase64String(capturedImageBytes);
-
-                MessageBox.Show("Upload Cloudinary xong! URL: " + url + "\nBase64 đã lưu vào txtImgData");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi chụp ảnh: " + ex.Message);
-            }
-        }
-
         private int gender = 2; // default Nam
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -244,7 +155,6 @@ namespace Complate
                 Console.WriteLine("Giới tính được chọn: " + gender);
             }
         }
-
         private async Task LoadPersonListAsync()
         {
             try
@@ -277,9 +187,11 @@ namespace Complate
                             CustomizeID = p["CustomizeID"]?.ToString(),
                             PersonUUID = p["PersonUUID"]?.ToString(),
                             IdCard = p["IdCard"]?.ToString(),
-                            Gender = p["Gender"]?.ToObject<int?>(),
+                            Name = p["Name"]?.ToString(),
+                            Telnum = p["Telnum"]?.ToString(),
+                            Gender = p["Gender"]?.ToObject<int?>() == 2 ? "Nam" : "Nữ",
                             Birthday = p["Birthday"]?.ToObject<DateTime?>(),
-                            Nation = p["Nation"]?.ToObject<int?>()
+                            Address = p["Address"]?.ToString(),
                         })
                         .ToList();
 
@@ -299,14 +211,58 @@ namespace Complate
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
+            if (dataGridView1.CurrentRow == null) return;
 
+            // Lấy các thông tin cơ bản
+            txt_Name.Text = dataGridView1.CurrentRow.Cells["Name"].Value?.ToString() ?? "";
+            txt_Telnum.Text = dataGridView1.CurrentRow.Cells["Telnum"].Value?.ToString() ?? "";
+            txt_Address.Text = dataGridView1.CurrentRow.Cells["Address"].Value?.ToString() ?? "";
+            dtp_Birthday.Value = dataGridView1.CurrentRow.Cells["Birthday"].Value != null
+                ? Convert.ToDateTime(dataGridView1.CurrentRow.Cells["Birthday"].Value)
+                : DateTime.Now;
+
+            // Gender
+            string genderVal = dataGridView1.CurrentRow.Cells["Gender"].Value?.ToString();
+            cbx_Gender.SelectedIndex = (genderVal == "Nam") ? 1 : 0;
+
+            // Lấy IdCard hiện tại
+            string idCard = dataGridView1.CurrentRow.Cells["IdCard"].Value?.ToString();
+            if (string.IsNullOrEmpty(idCard)) return;
+
+            // Tìm trong DB local
+            var person = _context.Persons.FirstOrDefault(p => p.IdCard == idCard);
+            if (person != null)
+            {
+                // Hiển thị ảnh từ URL hoặc Base64
+                if (!string.IsNullOrEmpty(person.PhotoUrl))
+                {
+                    txt_Imurl.Text = person.PhotoUrl;
+                }
+                if (!string.IsNullOrEmpty(person.PhotoData))
+                {
+                    txt_imgdata.Text = person.PhotoData;
+
+                    // Chuyển Base64 sang ảnh và show lên PictureBox
+                    try
+                    {
+                        byte[] bytes = Convert.FromBase64String(person.PhotoData);
+                        using (var ms = new MemoryStream(bytes))
+                        {
+                            pictureBox1.Image?.Dispose();
+                            pictureBox1.Image = Image.FromStream(ms);
+                            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+                        }
+                    }
+                    catch
+                    {
+                        pictureBox1.Image = null;
+                    }
+                }
+            }
         }
         private async void btn_Capture_Click(object sender, EventArgs e)
         {
-            CaptureAndUploadAsync();
         }
-
-
         private async void btn_Del_Click(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentRow == null)
@@ -381,6 +337,145 @@ namespace Complate
             await LoadPersonListAsync();
         }
 
+        private void MakeButtonRound(Button btn)
+        {
+            System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
+            int diameter = Math.Min(btn.Width, btn.Height);
+            path.AddEllipse(0, 0, diameter, diameter);
+            btn.Region = new Region(path);
+        }
+        private void ExportUserListToExcel()
+        {
+            try
+            {
+                if (bs.DataSource == null)
+                {
+                    MessageBox.Show("No users to export!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var users = (bs.DataSource as IEnumerable<dynamic>).ToList();
+
+                // Lấy thư mục Documents của user hiện tại
+                string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                string fileName = $"UserList_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
+                string fullPath = Path.Combine(documentsPath, fileName);
+
+                using (var workbook = new XLWorkbook())
+                {
+                    var worksheet = workbook.Worksheets.Add("Users");
+
+                    // Header
+                    worksheet.Cell(1, 1).Value = "CustomizeID";
+                    worksheet.Cell(1, 2).Value = "PersonUUID";
+                    worksheet.Cell(1, 3).Value = "IdCard";
+                    worksheet.Cell(1, 4).Value = "Name";
+                    worksheet.Cell(1, 5).Value = "Gender";
+                    worksheet.Cell(1, 6).Value = "Birthday";
+                    worksheet.Cell(1, 7).Value = "Address";
+
+                    // Data
+                    for (int i = 0; i < users.Count; i++)
+                    {
+                        var u = users[i];
+                        int row = i + 2;
+                        worksheet.Cell(row, 1).Value = u.CustomizeID ?? "";
+                        worksheet.Cell(row, 2).Value = u.PersonUUID ?? "";
+                        worksheet.Cell(row, 3).Value = u.IdCard ?? "";
+                        worksheet.Cell(row, 4).Value = u.Name ?? "";
+
+                        // Gender là "Nam"/"Nữ" rồi, không cần parse int
+                        string genderStr = u.Gender?.ToString() ?? "";
+                        worksheet.Cell(row, 5).Value = genderStr;
+
+                        // Birthday format
+                        worksheet.Cell(row, 6).Value = u.Birthday != null
+                            ? Convert.ToDateTime(u.Birthday).ToString("yyyy-MM-dd")
+                            : "";
+
+                        // Address
+                        worksheet.Cell(row, 7).Value = u.Address?.ToString() ?? "";
+                    }
+
+                    workbook.SaveAs(fullPath);
+                }
+
+                MessageBox.Show($"User list exported to Excel successfully!\nPath: {fullPath}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to export Excel: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            var row = dataGridView1.Rows[e.RowIndex];
+
+
+            txt_Name.Text = row.Cells["Name"].Value?.ToString() ?? "";
+            txt_Telnum.Text = row.Cells["Telnum"].Value?.ToString() ?? "";
+            dtp_Birthday.Value = row.Cells["Birthday"].Value != null
+                ? (DateTime)row.Cells["Birthday"].Value
+                : DateTime.Now;
+
+
+
+
+
+            var person = _context.Persons.FirstOrDefault(p => p.CustomizeID == row.Cells["CustomizeID"].Value.ToString());
+            if (person != null)
+            {
+                if (!string.IsNullOrEmpty(person.PhotoData))
+                {
+                    byte[] imgBytes = Convert.FromBase64String(person.PhotoData);
+                    using var ms = new MemoryStream(imgBytes);
+                    pictureBox1.Image?.Dispose();
+                    pictureBox1.Image = new Bitmap(ms);
+                    pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+                }
+                else if (!string.IsNullOrEmpty(person.PhotoUrl))
+                {
+                    try
+                    {
+                        var wc = new System.Net.WebClient();
+                        var imgBytes = wc.DownloadData(person.PhotoUrl);
+                        using var ms = new MemoryStream(imgBytes);
+                        pictureBox1.Image?.Dispose();
+                        pictureBox1.Image = new Bitmap(ms);
+                        pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+                    }
+                    catch { pictureBox1.Image = null; }
+                }
+                else
+                {
+                    pictureBox1.Image = null;
+                }
+            }
+        }
+        private void btn_create_Click(object sender, EventArgs e)
+        {
+            using (var createForm = new FormCreatePerson(_context))
+            {
+                createForm.ShowDialog();
+            }
+
+
+            _ = LoadPersonListAsync();
+        }
+
+      
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ExportUserListToExcel();
+        }
+        private void txt_Imurl_TextChanged(object sender, EventArgs e)
+        {
+            txt_Imurl.MaxLength = 0;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -416,10 +511,6 @@ namespace Complate
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void dataGridView1_AllowUserToDeleteRowsChanged(object sender, EventArgs e)
         {
@@ -432,14 +523,19 @@ namespace Complate
 
         }
 
-        private void txt_Imurl_TextChanged(object sender, EventArgs e)
-        {
-            txt_Imurl.MaxLength = 0;
-        }
+       
 
         private void dataGridView1_Scroll(object sender, ScrollEventArgs e)
         {
 
         }
+
+        private void txt_PersonType_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+      
+
     }
 }

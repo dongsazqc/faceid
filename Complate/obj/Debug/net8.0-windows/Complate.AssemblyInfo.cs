@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Complate")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7505d921dea99d1c4a73ae7589acb795c1af29f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Complate")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Complate")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

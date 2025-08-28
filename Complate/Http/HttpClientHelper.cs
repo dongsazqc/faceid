@@ -14,7 +14,7 @@ public static class HttpClientHelper
             if (_client == null)
             {
                 _client = new HttpClient();
-                _client.BaseAddress = new Uri("http://192.168.0.107"); // IP máy chấm công
+                _client.BaseAddress = new Uri("http://192.168.0.107"); 
 
                 var byteArray = Encoding.ASCII.GetBytes("admin:112233");
                 _client.DefaultRequestHeaders.Authorization =

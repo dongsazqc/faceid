@@ -194,7 +194,6 @@ namespace Complate
             }
             catch (Exception ex)
             {
-                lblWarning.Invoke(() => lblWarning.Text = $"Lỗi API hoặc dữ liệu: {ex.Message}");
             }
         }
 
@@ -331,6 +330,20 @@ namespace Complate
         {
             await LoadCheckinsAsync(CheckinRange.Week);
         }
+        private void dtg_historycheck_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            var row = dtg_historycheck.Rows[e.RowIndex];
+            txtName.Text = row.Cells["Name"].Value?.ToString() ?? "";
+            txt_idcard.Text = row.Cells["IdCard"].Value?.ToString() ?? "";
+            txtTime.Text = row.Cells["Time"].Value?.ToString() ?? "";
+
+            var photo = row.Cells["Photo"].Value as Image;
+            pbFace.Image?.Dispose();
+            pbFace.Image = photo != null ? new Bitmap(photo) : null;
+            pbFace.SizeMode = PictureBoxSizeMode.Zoom;
+        }
 
 
 
@@ -363,19 +376,5 @@ namespace Complate
 
         }
 
-        private void dtg_historycheck_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0) return;
-
-            var row = dtg_historycheck.Rows[e.RowIndex];
-            txtName.Text = row.Cells["Name"].Value?.ToString() ?? "";
-            txt_idcard.Text = row.Cells["IdCard"].Value?.ToString() ?? "";
-            txtTime.Text = row.Cells["Time"].Value?.ToString() ?? "";
-
-            var photo = row.Cells["Photo"].Value as Image;
-            pbFace.Image?.Dispose();
-            pbFace.Image = photo != null ? new Bitmap(photo) : null;
-            pbFace.SizeMode = PictureBoxSizeMode.Zoom;
-        }
     }
 }
